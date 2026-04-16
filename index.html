@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apip Romli - Software Engineer & Web Developer Portfolio" />
+  <meta name="author" content="Apip Romli" />
+  <title>Apip Romli | Software Engineer &amp; Web Developer</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Apip<span class="logo-accent">Romli</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right Side Controls -->
+      <div class="nav-controls">
+        <!-- Dark / Light Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <ul class="nav-mobile" id="navMobile">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <!-- Animated background particles -->
+    <div class="hero-bg">
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="hero-content">
+      <!-- Greeting Badge -->
+      <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+        <i class="fas fa-wave-square"></i>&nbsp; Welcome to my portfolio
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="200">
+        Hi, I'm <span class="gradient-text">Apip Romli</span>
+      </h1>
+
+      <!-- Typing Profession -->
+      <h2 class="hero-profession" data-aos="fade-up" data-aos-delay="300">
+        I'm a <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </h2>
+
+      <!-- Description -->
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="400">
+        Fresh graduate S1 Informatika dengan pengalaman sebagai Software Engineer Intern &amp; Web Developer.
+        Passionate dalam membangun aplikasi web yang modern, scalable, dan user-friendly.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+        <a href="CV - APIP ROMLI.pdf" download class="btn btn-primary">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="hero-socials" data-aos="fade-up" data-aos-delay="600">
+        <a href="https://github.com/apipromli" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/apip-romli-305109251" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/6285311312056" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:apipromli08@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Illustration / Avatar -->
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+      <div class="avatar-container">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <!-- Floating Tech Badges -->
+        <div class="tech-badge badge-1"><i class="fab fa-laravel"></i></div>
+        <div class="tech-badge badge-2"><i class="fab fa-vuejs"></i></div>
+        <div class="tech-badge badge-3"><i class="fab fa-python"></i></div>
+        <div class="tech-badge badge-4"><i class="fab fa-js"></i></div>
+        <div class="tech-badge badge-5"><i class="fab fa-github"></i></div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get To Know Me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Image / Card -->
+        <div class="about-image" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-card-visual">
+            <div class="about-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <!-- Stats Cards -->
+            <div class="about-stats">
+              <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                <span class="stat-number" data-target="3">0</span>+
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                <span class="stat-number" data-target="4">0</span>+
+                <span class="stat-label">Projects Done</span>
+              </div>
+              <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                <span class="stat-number" data-target="386">0</span>
+                <span class="stat-label">GPA / 4.0 ×0.01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="about-info" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="about-subtitle">Software Engineer &amp; Web Developer</h3>
+          <p class="about-text">
+            Saya adalah fresh graduate S1 Informatika dari <strong>Sekolah Tinggi Teknologi Cipasung</strong>
+            (GPA 3.86/4.0) dengan pengalaman nyata di industri sebagai Software Engineer Intern, Web Developer,
+            dan Operator Kampus.
+          </p>
+          <p class="about-text">
+            Passionate dalam back-end development dan arsitektur sistem. Terampil menggunakan
+            <strong>PHP/Laravel, Vue.js, JavaScript</strong>, serta database <strong>MySQL &amp; PostgreSQL</strong>.
+            Selalu antusias belajar teknologi baru dan berkontribusi dalam tim yang dinamis.
+          </p>
+
+          <!-- Info Grid -->
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="detail-label">Nama</span>
+                <span class="detail-value">Apip Romli</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="detail-label">Lokasi</span>
+                <span class="detail-value">Tasikmalaya, Jawa Barat</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="detail-label">Email</span>
+                <span class="detail-value">apipromli08@gmail.com</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="detail-label">Pendidikan</span>
+                <span class="detail-value">S1 Informatika, STT Cipasung</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <span class="detail-label">Status</span>
+                <span class="detail-value detail-open">Open to Work</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="detail-label">Phone</span>
+                <span class="detail-value">+62 853 1131 2056</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Timeline short -->
+          <div class="about-experience">
+            <h4 class="exp-title"><i class="fas fa-briefcase"></i> Pengalaman Terkini</h4>
+            <div class="exp-list">
+              <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                  <span class="exp-role">Software Engineer Intern</span>
+                  <span class="exp-company">PT Juara Gadai Jawa Barat</span>
+                  <span class="exp-period">Feb 2026 – Sekarang</span>
+                </div>
+              </div>
+              <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                  <span class="exp-role">Staff Operator & Web Developer</span>
+                  <span class="exp-company">Universitas Islam KH Ruhiyat Cipasung</span>
+                  <span class="exp-period">Nov 2025 – Sekarang</span>
+                </div>
+              </div>
+              <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                  <span class="exp-role">Software Engineer Trainee</span>
+                  <span class="exp-company">Alkademi, Bandung</span>
+                  <span class="exp-period">Des 2025 – Jan 2026</span>
+                </div>
+              </div>
+              <div class="exp-item">
+                <div class="exp-dot"></div>
+                <div class="exp-content">
+                  <span class="exp-role">Web Developer Intern</span>
+                  <span class="exp-company">Mall Plaza Asia Tasikmalaya</span>
+                  <span class="exp-period">Jul 2024 – Agu 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Technical Skills - Progress Bars -->
+        <div class="skills-bars" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="skills-subtitle"><i class="fas fa-code"></i> Technical Skills</h3>
+
+          <!-- HTML/CSS -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fab fa-html5"></i> HTML / CSS</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="90"></div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="80"></div>
+            </div>
+          </div>
+
+          <!-- PHP / Laravel -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fab fa-laravel"></i> PHP / Laravel</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="88"></div>
+            </div>
+          </div>
+
+          <!-- Vue.js -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="75"></div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+              <span class="skill-percent">72%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="72"></div>
+            </div>
+          </div>
+
+          <!-- MySQL / PostgreSQL -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fas fa-database"></i> MySQL / PostgreSQL</span>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="82"></div>
+            </div>
+          </div>
+
+          <!-- C# / .NET -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fas fa-hashtag"></i> C# / .NET</span>
+              <span class="skill-percent">68%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="68"></div>
+            </div>
+          </div>
+
+          <!-- Git / GitHub -->
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-name"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Icons -->
+        <div class="skills-icons-col" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="skills-subtitle"><i class="fas fa-layer-group"></i> Tech Stack</h3>
+          <div class="skills-icons-grid">
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fab fa-html5" style="color:#e34f26"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="130">
+              <i class="fab fa-css3-alt" style="color:#264de4"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="160">
+              <i class="fab fa-js-square" style="color:#f7df1e"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="190">
+              <i class="fab fa-php" style="color:#8892be"></i>
+              <span>PHP</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="220">
+              <i class="fab fa-laravel" style="color:#ff2d20"></i>
+              <span>Laravel</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="250">
+              <i class="fab fa-vuejs" style="color:#42b883"></i>
+              <span>Vue.js</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="280">
+              <i class="fab fa-react" style="color:#61dafb"></i>
+              <span>React.js</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="310">
+              <i class="fab fa-python" style="color:#3776ab"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="340">
+              <i class="fas fa-database" style="color:#00758f"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="370">
+              <i class="fas fa-server" style="color:#336791"></i>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fab fa-git-alt" style="color:#f05032"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="430">
+              <i class="fab fa-github" style="color:#ccc"></i>
+              <span>GitHub</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="460">
+              <i class="fas fa-cloud" style="color:#0089d6"></i>
+              <span>Azure</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="490">
+              <i class="fas fa-wind" style="color:#06b6d4"></i>
+              <span>REST API</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="520">
+              <i class="fab fa-figma" style="color:#f24e1e"></i>
+              <span>Figma</span>
+            </div>
+            <div class="skill-icon-card" data-aos="zoom-in" data-aos-delay="550">
+              <i class="fab fa-bootstrap" style="color:#7952b3"></i>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills Tags -->
+          <h3 class="skills-subtitle mt-2"><i class="fas fa-brain"></i> Soft Skills</h3>
+          <div class="soft-skills-tags">
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Team Work</span>
+            <span class="tag">Detail Oriented</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Time Management</span>
+            <span class="tag">Fast Learner</span>
+            <span class="tag">Adaptability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="system">System</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Chatbot AI -->
+        <div class="project-card" data-category="ai web" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-inner">
+            <!-- Header -->
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apipromli" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Content -->
+            <h3 class="project-title">Virtual Assistant Chatbot Akademik</h3>
+            <p class="project-desc">
+              Proyek Skripsi — Chatbot akademik berbasis web untuk STT Cipasung menggunakan
+              arsitektur LSTM (Long Short-Term Memory). Mengintegrasikan REST API antara
+              front-end dan back-end serta sistem informasi akademik kampus.
+            </p>
+            <!-- Tags -->
+            <div class="project-tags">
+              <span class="ptag">Laravel</span>
+              <span class="ptag">PHP</span>
+              <span class="ptag">Python</span>
+              <span class="ptag">LSTM</span>
+              <span class="ptag">REST API</span>
+              <span class="ptag">MySQL</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-badge badge-ai">AI / ML</span>
+              <span class="project-year">2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Financial Management System -->
+        <div class="project-card" data-category="web system" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apipromli" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Financial Management System</h3>
+            <p class="project-desc">
+              Sistem pengelolaan keuangan berbasis web untuk PT Juara Gadai Jawa Barat.
+              Fitur: manajemen jurnal keuangan, laporan otomatis, integrasi data real-time,
+              dan pengelolaan transaksi gadai.
+            </p>
+            <div class="project-tags">
+              <span class="ptag">Laravel</span>
+              <span class="ptag">Vue.js</span>
+              <span class="ptag">PostgreSQL</span>
+              <span class="ptag">REST API</span>
+              <span class="ptag">Tailwind</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-badge badge-web">Web App</span>
+              <span class="project-year">2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Sistem Keuangan Sekolah -->
+        <div class="project-card" data-category="web system" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apipromli" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Sistem Keuangan Sekolah</h3>
+            <p class="project-desc">
+              Aplikasi keuangan sekolah untuk SMK Riyadlut Tauhid. Mengelola SPP siswa,
+              kas masuk/keluar, dan gaji guru. Dilengkapi laporan otomatis keuangan bulanan
+              dan dashboard visualisasi data.
+            </p>
+            <div class="project-tags">
+              <span class="ptag">Laravel</span>
+              <span class="ptag">PHP</span>
+              <span class="ptag">MySQL</span>
+              <span class="ptag">Bootstrap</span>
+              <span class="ptag">Chart.js</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-badge badge-system">System</span>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: PPDB System -->
+        <div class="project-card" data-category="web system" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apipromli" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Sistem Informasi PPDB Online</h3>
+            <p class="project-desc">
+              Sistem Penerimaan Peserta Didik Baru berbasis web untuk SMK Riyadlut Tauhid.
+              Fitur: pendaftaran online, validasi data calon siswa, seleksi otomatis,
+              dan laporan hasil seleksi.
+            </p>
+            <div class="project-tags">
+              <span class="ptag">Laravel</span>
+              <span class="ptag">PHP</span>
+              <span class="ptag">MySQL</span>
+              <span class="ptag">Bootstrap</span>
+              <span class="ptag">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-badge badge-system">System</span>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Website LPPM Kampus -->
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apipromli" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Website LPPM Kampus</h3>
+            <p class="project-desc">
+              Pengembangan website resmi LPPM (Lembaga Penelitian dan Pengabdian kepada Masyarakat)
+              untuk Universitas Islam KH Ruhiyat Cipasung. Desain responsif dan modern.
+            </p>
+            <div class="project-tags">
+              <span class="ptag">Laravel</span>
+              <span class="ptag">PHP</span>
+              <span class="ptag">MySQL</span>
+              <span class="ptag">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-badge badge-web">Web App</span>
+              <span class="project-year">2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Company Website -->
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apipromli" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Company Website – Mall Plaza Asia</h3>
+            <p class="project-desc">
+              Pengembangan website perusahaan PT Asia Tritunggal Jaya (Mall Plaza Asia Tasikmalaya).
+              Dari analisis kebutuhan, desain antarmuka, hingga deployment menggunakan PHP, Laravel,
+              dan MySQL.
+            </p>
+            <div class="project-tags">
+              <span class="ptag">PHP</span>
+              <span class="ptag">Laravel</span>
+              <span class="ptag">MySQL</span>
+              <span class="ptag">HTML/CSS</span>
+              <span class="ptag">Wix</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-badge badge-web">Web App</span>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end projects-grid -->
+
+      <!-- GitHub CTA -->
+      <div class="github-cta" data-aos="fade-up" data-aos-delay="100">
+        <p>Lihat lebih banyak project saya di GitHub</p>
+        <a href="https://github.com/apipromli" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fab fa-github"></i> View GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info Cards -->
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+          <p class="contact-intro">
+            Tertarik bekerja sama atau punya pertanyaan? Jangan ragu untuk menghubungi saya.
+            Saya selalu terbuka untuk peluang baru dan kolaborasi menarik!
+          </p>
+
+          <div class="contact-cards">
+            <a href="mailto:apipromli08@gmail.com" class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">apipromli08@gmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://wa.me/6285311312056" target="_blank" rel="noopener" class="contact-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#25d366,#128c7e)">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">WhatsApp</span>
+                <span class="contact-card-value">+62 853 1131 2056</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/apip-romli-305109251" target="_blank" rel="noopener" class="contact-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#0077b5,#004471)">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">apip-romli-305109251</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+
+            <a href="https://github.com/apipromli" target="_blank" rel="noopener" class="contact-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#333,#555)">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">GitHub</span>
+                <span class="contact-card-value">github.com/apipromli</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="100">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nama <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="Nama lengkap Anda" required />
+                </div>
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="email@example.com" required />
+                </div>
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subjek <span class="required">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-pen"></i>
+                <input type="text" id="subject" name="subject" placeholder="Subjek pesan Anda" required />
+              </div>
+              <span class="form-error" id="subjectError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Pesan <span class="required">*</span></label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-comment-alt"></i>
+                <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+              </div>
+              <span class="form-error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
+
+            <!-- Success Message -->
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              Pesan berhasil dikirim! Saya akan segera membalas.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Apip<span class="logo-accent">Romli</span><span class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            Building digital experiences with passion &amp; precision.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/apipromli" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/apip-romli-305109251" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/6285311312056" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:apipromli08@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contact</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> apipromli08@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +62 853 1131 2056</li>
+            <li><i class="fas fa-map-marker-alt"></i> Tasikmalaya, Jawa Barat</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Apip Romli. All rights reserved.</p>
+        <p>Crafted with <i class="fas fa-heart" style="color:#ef4444"></i> using HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

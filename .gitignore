@@ -1,0 +1,14 @@
+# Ignore Claude Code internal folder
+.claude/
+
+# Jangan upload file CV ke GitHub (opsional, hapus baris ini jika ingin upload CV)
+# *.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
