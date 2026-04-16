@@ -12,12 +12,12 @@
   --surface:     #14142b;
   --surface2:    #1c1c38;
   --surface3:    #22223f;
-  --border:      rgba(99, 102, 241, 0.15);
+  --border:      rgba(56, 189, 248, 0.18);
 
-  --accent:      #6366f1;
-  --accent-2:    #a855f7;
-  --accent-grad: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-  --accent-glow: rgba(99, 102, 241, 0.25);
+  --accent:      #3b82f6;
+  --accent-2:    #38bdf8;
+  --accent-grad: linear-gradient(135deg, #3b82f6 0%, #38bdf8 100%);
+  --accent-glow: rgba(59, 130, 246, 0.28);
 
   --text:        #e2e8f0;
   --text-muted:  #94a3b8;
@@ -40,7 +40,7 @@
   --surface:     #ffffff;
   --surface2:    #f8fafc;
   --surface3:    #f1f5f9;
-  --border:      rgba(99, 102, 241, 0.18);
+  --border:      rgba(56, 189, 248, 0.22);
 
   --text:        #0f172a;
   --text-muted:  #475569;
@@ -48,7 +48,7 @@
 
   --shadow:      0 4px 20px rgba(0,0,0,0.08);
   --shadow-lg:   0 8px 40px rgba(0,0,0,0.12);
-  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-glow: rgba(59, 130, 246, 0.18);
 }
 
 /* === RESET & BASE === */
@@ -342,7 +342,7 @@ input, textarea { font-family: inherit; }
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
   top: -100px;
   right: -100px;
   border-radius: 50%;
@@ -353,7 +353,7 @@ input, textarea { font-family: inherit; }
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(168,85,247,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%);
   bottom: 100px;
   left: -100px;
   border-radius: 50%;
@@ -514,7 +514,7 @@ input, textarea { font-family: inherit; }
 .avatar-ring.ring-2 {
   inset: 15px;
   border: 1px solid transparent;
-  background: linear-gradient(135deg, #a855f7, #6366f1) border-box;
+  background: linear-gradient(135deg, #38bdf8, #3b82f6) border-box;
   animation: rotate 8s linear infinite reverse;
   opacity: 0.6;
 }
@@ -531,10 +531,20 @@ input, textarea { font-family: inherit; }
   justify-content: center;
   font-size: 4rem;
   color: var(--accent);
-  border: 2px solid var(--border);
+  border: 3px solid var(--accent);
   box-shadow: 0 0 60px var(--accent-glow);
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+
+.avatar-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  display: block;
 }
 
 /* Tech Badges floating */
@@ -1154,8 +1164,8 @@ input, textarea { font-family: inherit; }
   letter-spacing: 0.5px;
 }
 
-.badge-ai     { background: rgba(168,85,247,0.15); color: #a855f7; border: 1px solid rgba(168,85,247,0.3); }
-.badge-web    { background: rgba(99,102,241,0.15);  color: #6366f1; border: 1px solid rgba(99,102,241,0.3); }
+.badge-ai     { background: rgba(56,189,248,0.15);  color: #38bdf8; border: 1px solid rgba(56,189,248,0.3); }
+.badge-web    { background: rgba(59,130,246,0.15);  color: #3b82f6; border: 1px solid rgba(59,130,246,0.3); }
 .badge-system { background: rgba(34,197,94,0.15);  color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
 
 .project-year {
@@ -1525,7 +1535,7 @@ input, textarea { font-family: inherit; }
 
   .hero-image { order: -1; }
   .avatar-container { width: 220px; height: 220px; }
-  .avatar-icon { width: 130px; height: 130px; font-size: 3rem; }
+  .avatar-icon { width: 130px; height: 130px; font-size: 3rem; overflow: hidden; }
 
   .about-grid   { grid-template-columns: 1fr; }
   .about-details { grid-template-columns: 1fr; }
@@ -1558,12 +1568,12 @@ input, textarea { font-family: inherit; }
 
 /* Light mode adjustments */
 [data-theme="light"] .hero-bg::before {
-  background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
 }
 
 [data-theme="light"] .avatar-icon {
   background: #f1f5f9;
-  box-shadow: 0 0 40px rgba(99,102,241,0.15);
+  box-shadow: 0 0 40px rgba(59,130,246,0.15);
 }
 
 [data-theme="light"] .skill-bar-bg { background: #e2e8f0; }
