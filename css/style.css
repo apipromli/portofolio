@@ -266,6 +266,32 @@ input, textarea { font-family: inherit; }
   transform: rotate(20deg);
 }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 12px;
+  height: 38px;
+  border-radius: 50px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.lang-toggle i { font-size: 0.85rem; }
+
+.lang-toggle:hover {
+  background: var(--accent-grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;

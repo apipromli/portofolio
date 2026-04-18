@@ -17,10 +17,111 @@
 
 'use strict';
 
+/* ===== TRANSLATIONS ===== */
+const translations = {
+  id: {
+    'nav.home': 'Beranda', 'nav.about': 'Tentang', 'nav.skills': 'Keahlian',
+    'nav.projects': 'Proyek', 'nav.contact': 'Kontak',
+    'hero.badge': 'Selamat datang di portofolio saya',
+    'hero.greeting': 'Halo, Saya ', 'hero.prefix': 'Saya seorang ',
+    'hero.typed': ['Software Engineer', 'Web Developer', 'Backend Developer', 'Laravel Developer', 'Tech Enthusiast'],
+    'hero.desc': 'Fresh graduate S1 Informatika dengan pengalaman sebagai Software Engineer Intern & Web Developer. Passionate dalam membangun aplikasi web yang modern, scalable, dan user-friendly.',
+    'hero.cta.contact': ' Hubungi Saya', 'hero.cta.projects': ' Lihat Proyek',
+    'about.tag': 'Kenali Saya', 'about.title1': 'Tentang', 'about.title2': 'Saya',
+    'about.subtitle': 'Software Engineer & Web Developer',
+    'about.text1': 'Saya adalah fresh graduate S1 Informatika dari <strong>Sekolah Tinggi Teknologi Cipasung</strong> (GPA 3.86/4.0) dengan pengalaman nyata di industri sebagai Software Engineer Intern, Web Developer, dan Operator Kampus.',
+    'about.text2': 'Passionate dalam back-end development dan arsitektur sistem. Terampil menggunakan <strong>PHP/Laravel, Vue.js, JavaScript</strong>, serta database <strong>MySQL & PostgreSQL</strong>. Selalu antusias belajar teknologi baru dan berkontribusi dalam tim yang dinamis.',
+    'about.stat.exp': 'Tahun Pengalaman', 'about.stat.projects': 'Proyek Selesai',
+    'about.lbl.name': 'Nama', 'about.lbl.location': 'Lokasi', 'about.lbl.email': 'Email',
+    'about.lbl.education': 'Pendidikan', 'about.lbl.status': 'Status',
+    'about.lbl.phone': 'Telepon', 'about.lbl.open': 'Buka untuk Bekerja',
+    'about.exp.title': 'Pengalaman Terkini',
+    'about.exp1.role': 'Software Engineer Intern', 'about.exp1.period': 'Feb 2026 – Sekarang',
+    'about.exp2.role': 'Staff Operator & Web Developer', 'about.exp2.period': 'Nov 2025 – Sekarang',
+    'about.exp3.role': 'Software Engineer Trainee', 'about.exp3.period': 'Des 2025 – Jan 2026',
+    'about.exp4.role': 'Web Developer Intern', 'about.exp4.period': 'Jul 2024 – Agu 2024',
+    'skills.tag': 'Yang Saya Kuasai', 'skills.title1': 'Keahlian', 'skills.title2': 'Saya',
+    'skills.technical': 'Keahlian Teknis', 'skills.stack': 'Tech Stack', 'skills.soft': 'Kemampuan Lunak',
+    'projects.tag': 'Pekerjaan Saya', 'projects.title1': 'Proyek', 'projects.title2': 'Unggulan',
+    'projects.filter.all': 'Semua', 'projects.filter.web': 'Web App',
+    'projects.filter.ai': 'AI / ML', 'projects.filter.system': 'Sistem',
+    'projects.cta.text': 'Lihat lebih banyak project saya di GitHub',
+    'projects.cta.btn': ' Lihat Profil GitHub',
+    'proj.fms.desc': 'Sistem pengelolaan keuangan berbasis web untuk PT Juara Gadai Jawa Barat. Fitur: manajemen jurnal keuangan, laporan otomatis, integrasi data real-time, dan pengelolaan transaksi gadai.',
+    'proj.ecom.desc': 'Aplikasi e-commerce fullstack menggunakan .NET 8. Fitur: manajemen produk, keranjang belanja, proses checkout, dan autentikasi pengguna. Take-home task Fullstack .NET di Alkademi.',
+    'proj.chatbot.desc': 'Proyek Skripsi — Chatbot akademik berbasis web untuk STT Cipasung menggunakan arsitektur LSTM. Mengintegrasikan REST API antara front-end dan back-end serta sistem informasi akademik kampus.',
+    'proj.lppm.desc': 'Pengembangan website resmi LPPM (Lembaga Penelitian dan Pengabdian kepada Masyarakat) untuk Universitas Islam KH Ruhiyat Cipasung. Desain responsif dan modern.',
+    'proj.paradaya.desc': 'Platform membaca buku digital berbasis web. Pengguna dapat menelusuri koleksi buku, membaca konten secara online, dan mengelola daftar bacaan. Tampilan nyaman dan responsif.',
+    'proj.finance.desc': 'Aplikasi keuangan sekolah untuk SMK Riyadlut Tauhid. Mengelola SPP siswa, kas masuk/keluar, dan gaji guru. Dilengkapi laporan otomatis keuangan bulanan dan dashboard visualisasi data.',
+    'proj.ppdb.desc': 'Sistem Penerimaan Peserta Didik Baru berbasis web untuk SMK Riyadlut Tauhid. Fitur: pendaftaran online, validasi data calon siswa, seleksi otomatis, dan laporan hasil seleksi.',
+    'proj.mall.desc': 'Pengembangan website perusahaan PT Asia Tritunggal Jaya (Mall Plaza Asia Tasikmalaya). Dari analisis kebutuhan, desain antarmuka, hingga deployment menggunakan PHP, Laravel, Wix.',
+    'contact.tag': 'Hubungi Saya', 'contact.title1': 'Kontak', 'contact.title2': 'Saya',
+    'contact.intro': 'Tertarik bekerja sama atau punya pertanyaan? Jangan ragu untuk menghubungi saya. Saya selalu terbuka untuk peluang baru dan kolaborasi menarik!',
+    'contact.lbl.name': 'Nama', 'contact.lbl.subject': 'Subjek', 'contact.lbl.message': 'Pesan',
+    'contact.ph.name': 'Nama lengkap Anda', 'contact.ph.subject': 'Subjek pesan Anda',
+    'contact.ph.message': 'Tulis pesan Anda di sini...',
+    'contact.btn': ' Kirim Pesan',
+    'contact.success': 'Pesan berhasil dikirim! Saya akan segera membalas.',
+    'footer.tagline': 'Membangun pengalaman digital dengan passion & presisi.',
+    'footer.links': 'Tautan Cepat', 'footer.contact': 'Kontak',
+    'footer.copy': '© {year} Apip Romli. Semua hak cipta dilindungi.',
+    'footer.craft': 'Dibuat dengan ❤️ menggunakan HTML, CSS & JavaScript',
+  },
+  en: {
+    'nav.home': 'Home', 'nav.about': 'About', 'nav.skills': 'Skills',
+    'nav.projects': 'Projects', 'nav.contact': 'Contact',
+    'hero.badge': 'Welcome to my portfolio',
+    'hero.greeting': "Hi, I'm ", 'hero.prefix': "I'm a ",
+    'hero.typed': ['Software Engineer', 'Web Developer', 'Backend Developer', 'Laravel Developer', 'Tech Enthusiast'],
+    'hero.desc': "Fresh graduate in Informatics with experience as Software Engineer Intern & Web Developer. Passionate about building modern, scalable, and user-friendly web applications.",
+    'hero.cta.contact': ' Contact Me', 'hero.cta.projects': ' View Projects',
+    'about.tag': 'Get To Know Me', 'about.title1': 'About', 'about.title2': 'Me',
+    'about.subtitle': 'Software Engineer & Web Developer',
+    'about.text1': 'I am a fresh graduate in Informatics from <strong>Sekolah Tinggi Teknologi Cipasung</strong> (GPA 3.86/4.0) with real industry experience as a Software Engineer Intern, Web Developer, and Campus Operator.',
+    'about.text2': 'Passionate about back-end development and system architecture. Skilled in <strong>PHP/Laravel, Vue.js, JavaScript</strong>, and databases <strong>MySQL & PostgreSQL</strong>. Always eager to learn new technologies and contribute to dynamic teams.',
+    'about.stat.exp': 'Years Experience', 'about.stat.projects': 'Projects Done',
+    'about.lbl.name': 'Name', 'about.lbl.location': 'Location', 'about.lbl.email': 'Email',
+    'about.lbl.education': 'Education', 'about.lbl.status': 'Status',
+    'about.lbl.phone': 'Phone', 'about.lbl.open': 'Open to Work',
+    'about.exp.title': 'Recent Experience',
+    'about.exp1.role': 'Software Engineer Intern', 'about.exp1.period': 'Feb 2026 – Present',
+    'about.exp2.role': 'Staff Operator & Web Developer', 'about.exp2.period': 'Nov 2025 – Present',
+    'about.exp3.role': 'Software Engineer Trainee', 'about.exp3.period': 'Dec 2025 – Jan 2026',
+    'about.exp4.role': 'Web Developer Intern', 'about.exp4.period': 'Jul 2024 – Aug 2024',
+    'skills.tag': 'What I Know', 'skills.title1': 'My', 'skills.title2': 'Skills',
+    'skills.technical': 'Technical Skills', 'skills.stack': 'Tech Stack', 'skills.soft': 'Soft Skills',
+    'projects.tag': 'My Work', 'projects.title1': 'Featured', 'projects.title2': 'Projects',
+    'projects.filter.all': 'All', 'projects.filter.web': 'Web App',
+    'projects.filter.ai': 'AI / ML', 'projects.filter.system': 'System',
+    'projects.cta.text': 'See more of my projects on GitHub',
+    'projects.cta.btn': ' View GitHub Profile',
+    'proj.fms.desc': 'Web-based financial management system for PT Juara Gadai Jawa Barat. Features: financial journal management, automatic reports, real-time data integration, and pawn transaction management.',
+    'proj.ecom.desc': 'Fullstack e-commerce app using .NET 8. Features: product management, shopping cart, checkout, and user authentication. Built as a take-home task for Fullstack .NET at Alkademi.',
+    'proj.chatbot.desc': 'Thesis Project — Web-based academic chatbot for STT Cipasung using LSTM architecture. Integrates REST API between front-end and back-end with the campus academic information system.',
+    'proj.lppm.desc': 'Development of the official LPPM website (Research & Community Service Institute) for Universitas Islam KH Ruhiyat Cipasung. Responsive and modern design.',
+    'proj.paradaya.desc': 'Digital book reading platform. Users can browse book collections, read content online, and manage their reading list. Built with a comfortable and responsive UI.',
+    'proj.finance.desc': 'School financial app for SMK Riyadlut Tauhid. Manages student fees, cash in/out, and teacher salaries. Includes automatic monthly reports and a data visualization dashboard.',
+    'proj.ppdb.desc': 'Online New Student Enrollment system for SMK Riyadlut Tauhid. Features: online registration, student data validation, automatic selection, and selection result reports.',
+    'proj.mall.desc': 'Company website for PT Asia Tritunggal Jaya (Mall Plaza Asia Tasikmalaya). From requirements analysis and UI design to deployment using PHP, Laravel, and Wix.',
+    'contact.tag': 'Get In Touch', 'contact.title1': 'Contact', 'contact.title2': 'Me',
+    'contact.intro': 'Interested in working together or have a question? Feel free to reach out. I am always open to new opportunities and exciting collaborations!',
+    'contact.lbl.name': 'Name', 'contact.lbl.subject': 'Subject', 'contact.lbl.message': 'Message',
+    'contact.ph.name': 'Your full name', 'contact.ph.subject': 'Your message subject',
+    'contact.ph.message': 'Write your message here...',
+    'contact.btn': ' Send Message',
+    'contact.success': 'Message sent successfully! I will reply as soon as possible.',
+    'footer.tagline': 'Building digital experiences with passion & precision.',
+    'footer.links': 'Quick Links', 'footer.contact': 'Contact',
+    'footer.copy': '© {year} Apip Romli. All rights reserved.',
+    'footer.craft': 'Crafted with ❤️ using HTML, CSS & JavaScript',
+  }
+};
+
 /* ===== DOM READY ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initAOS();
   initThemeToggle();
+  initLangToggle();
   initNavbar();
   initHamburger();
   initTypewriter();
@@ -140,27 +241,78 @@ function initHamburger() {
   });
 }
 
+/* ===== LANGUAGE TOGGLE ===== */
+function initLangToggle() {
+  const btn      = document.getElementById('langToggle');
+  const langText = document.getElementById('langText');
+  if (!btn) return;
+
+  const saved = localStorage.getItem('lang') || 'id';
+  applyLang(saved);
+
+  btn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-lang') || 'id';
+    const next    = current === 'id' ? 'en' : 'id';
+    applyLang(next);
+    localStorage.setItem('lang', next);
+  });
+}
+
+function applyLang(lang) {
+  document.documentElement.setAttribute('data-lang', lang);
+  const t = translations[lang];
+
+  /* Text content / innerHTML */
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] === undefined) return;
+    if (key === 'footer.copy') {
+      el.innerHTML = t[key].replace('{year}', new Date().getFullYear())
+        .replace('❤️', '<i class="fas fa-heart" style="color:#ef4444"></i>');
+    } else if (key === 'footer.craft') {
+      el.innerHTML = t[key]
+        .replace('❤️', '<i class="fas fa-heart" style="color:#ef4444"></i>');
+    } else if (typeof t[key] === 'string' && t[key].includes('<')) {
+      el.innerHTML = t[key];
+    } else if (typeof t[key] === 'string') {
+      el.textContent = t[key];
+    }
+  });
+
+  /* Placeholders */
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key]) el.setAttribute('placeholder', t[key]);
+  });
+
+  /* Update lang button label */
+  const langText = document.getElementById('langText');
+  if (langText) langText.textContent = lang === 'id' ? 'EN' : 'ID';
+
+  /* Restart typewriter with new phrases */
+  window._typedPhrases = t['hero.typed'];
+  if (window._restartTyped) window._restartTyped();
+}
+
 /* ===== TYPEWRITER EFFECT ===== */
 function initTypewriter() {
-  const el      = document.getElementById('typedText');
+  const el = document.getElementById('typedText');
   if (!el) return;
 
-  const phrases = [
-    'Software Engineer',
-    'Web Developer',
-    'Backend Developer',
-    'Laravel Developer',
-    'Tech Enthusiast',
-  ];
+  window._typedPhrases = translations[
+    document.documentElement.getAttribute('data-lang') || 'id'
+  ]['hero.typed'];
 
   let phraseIndex = 0;
   let charIndex   = 0;
   let isDeleting  = false;
   let pause       = false;
+  let timerId     = null;
 
   function type() {
     if (pause) return;
-
+    const phrases = window._typedPhrases;
+    phraseIndex = phraseIndex % phrases.length;
     const currentPhrase = phrases[phraseIndex];
 
     if (isDeleting) {
@@ -174,26 +326,33 @@ function initTypewriter() {
     let speed = isDeleting ? 60 : 100;
 
     if (!isDeleting && charIndex === currentPhrase.length) {
-      // Pause at end
       pause = true;
       setTimeout(() => {
         pause = false;
         isDeleting = true;
-        setTimeout(type, speed);
+        timerId = setTimeout(type, speed);
       }, 1800);
       return;
     }
 
     if (isDeleting && charIndex === 0) {
-      isDeleting   = false;
-      phraseIndex  = (phraseIndex + 1) % phrases.length;
-      speed        = 300;
+      isDeleting  = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      speed       = 300;
     }
 
-    setTimeout(type, speed);
+    timerId = setTimeout(type, speed);
   }
 
-  setTimeout(type, 1000);
+  /* Allow lang toggle to restart cleanly */
+  window._restartTyped = () => {
+    clearTimeout(timerId);
+    pause       = false;
+    isDeleting  = true;
+    timerId = setTimeout(type, 100);
+  };
+
+  timerId = setTimeout(type, 1000);
 }
 
 /* ===== PARTICLE BACKGROUND ===== */
